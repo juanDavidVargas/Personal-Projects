@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cámara con HTML 5</title>
+    <style media="screen">
+    body{
+      text-align: center;
+    }
+
+    #camara{
+      display: inline-block;
+      position: relative;
+    }
+
+      #video{
+        display: none;
+      }
+
+      #snap{
+        border-radius: 50%;
+        background-color: rgba(200, 200, 200, 0.6);
+        border: solid 5px #FFF;
+        position: absolute;
+        bottom: 2.5em;
+        width: 100px;
+        height: 100px;
+        left: calc(50% - 50px);
+        cursor: pointer;
+      }
+
+      #download-link{
+        display: none;
+      }
+
+      #actions{
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        display: none;
+      }
+
+      #actions a{
+        margin-right: 1em;
+        cursor: pointer;
+      }
+
+      #actions img{
+        width: 50px;
+        height: 50px;
+      }
+
+      #stickers{
+        height: calc(100% - 120px);
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        padding-top: 100px;
+        display: none;
+      }
+
+      .sticker{
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="camara">
+      <div id="actions">
+        <a id="download"><img src="./download.png" alt="Imágen no encontrada"></a>
+        <a id="sticker"><img src="./sticker.png" alt="Imágen no encontrada"></a>
+        <a id="cancel"><img src="./cancel.png" alt="Imágen no encontrada"></a>
+      </div>
+      <canvas id="canvas" width="500" height="500"></canvas>
+      <button type="button" id="snap"></button>
+      <div id="stickers">
+        <img src="./Stickers/1.png" alt="Imágen no encontrada" class="sticker">
+        <img src="./Stickers/2.png" alt="Imágen no encontrada" class="sticker">
+        <img src="./Stickers/3.png" alt="Imágen no encontrada" class="sticker">
+        <img src="./Stickers/4.png" alt="Imágen no encontrada" class="sticker">
+        <img src="./Stickers/5.png" alt="Imágen no encontrada" class="sticker">
+        <img src="./Stickers/6.png" alt="Imágen no encontrada" class="sticker">
+        <img src="./Stickers/7.png" alt="Imágen no encontrada" class="sticker">
+        <img src="./Stickers/8.png" alt="Imágen no encontrada" class="sticker">
+      </div>
+    </div>
+    <video id="video" autoplay="autoplay"></video>
+    <a href="" id="download-link"></a>
+    <script type="text/javascript" src="./camara.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>

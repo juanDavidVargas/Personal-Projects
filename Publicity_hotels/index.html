@@ -1,0 +1,161 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <!-- <meta charset="utf-8"> -->
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Hotel</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
+        <link href="css/font-awesome.css" rel="stylesheet">
+        <link href="css/jquery-ui.css" rel="stylesheet">
+        <link href="css/jquery-ui.structure.css" rel="stylesheet">
+        <link href="css/jquery-ui.theme.css" rel="stylesheet">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body ontouchstart="">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <header>
+          <div id="logo"><h1><img src="img/logo.jpg" alt="logo"></h1></div>
+            <div id="navigation">
+              <nav class="callig">
+                <ul id="navegacionPrincipals">
+                  <li><a href="#index">Home</a></li>
+                  <li><a href="#tech">Bedrooms</a></li>
+                  <li><a href="#costos">Costs</a></li>
+                  <li><a href="#buffet">Gallery</a></li>
+                  <li><a href="#contactos">Contacts</a></li>
+                  <li><a href="#buffet"></a></li>
+                </ul>
+              </nav>
+            </div>
+        </header>
+        <div class="slider_container fullScreen">
+          <div class="slideContainer">
+            <div class="slide fullScreen" data-background='img/img1'></div>
+            <div class="slide fullScreen" data-background='img/img2'></div>
+            <div class="slide fullScreen" data-background='img/img3'></div>
+            <div class="slide fullScreen" data-background='img/img4'></div>
+          </div>
+        </div>
+        <section class="fullScreen" id="index">
+          <div class="mensajePrincipal">
+            <p class="triangle"><span>Lovely Rooms Hotel</span></p>
+            <h2>A place to rest and enjoy</h2>
+            <p>Medellín, Colombia</p>
+          </div>
+        </section>
+        <section id="tech" class="fullScreen">
+          <h1 class="centerCircle callig">Bedrooms</h1>
+            <div class="half halfRooms">
+              <img src="img/img5.jpg" alt="Imágen no encontrada">
+            </div>
+            <div class="half halfRooms">
+              <img src="img/img6.jpg" alt="Imágen no encontrada">
+            </div>
+        </section>
+        <script type="text/x-jquery-tmpl" id="precioTemplate">
+          <div>
+              <div class="ribbon"></div>
+              <h3>${paquete}</h3>
+              <p><strong>Contenido del paquete</strong></p>
+              <ol>
+                {{each opciones}}
+                    <li>${opcion}</li>
+                {{/each}}
+              </ol>
+              <p class="costo">${costo}</p>
+              <a id="regresarVentana">Regresar</a>
+          </div>
+        </script>
+        <section id="costos" class="fullScreen callig">
+            <div class="marginTop">
+              <div class="precio">
+                <div class="ribbon"></div>
+                <h3>Costs</h3><p>Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</p>
+                  <p class="costo">100.00 USD</p>
+                  <a class="ver-mas">More Info</a>
+              </div>
+              <div class="precio">
+                <div class="ribbon"></div>
+                <h3>Costs</h3><p>Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</p>
+                  <p class="costo">100.00 USD</p>
+                  <a class="ver-mas">More Info</a>
+              </div>
+              <div class="precio">
+                <div class="ribbon"></div>
+                <h3>Costs</h3><p>Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.</p>
+                  <p class="costo">100.00 USD</p>
+                  <a class="ver-mas">More Info</a>
+              </div>
+            </div>
+        </section>
+        <section id="buffet" class="fullScreen" data-stellar-background-ratio="0.2">
+          <div class="img-food viewPort" data-background="img/reception"></div>
+          <div class="img-food" data-background="img/dinning_room"></div>
+          <div class="img-food" data-background="img/exterior"></div>
+          <div class="img-food" data-background="img/pool"></div>
+        </section>
+        <section class="fullScreen" id="contactos" data-stellar-background-ratio="0.2">
+          <div class="marginTop callig">
+            <h1>Contacts</h1>
+            <div class="half">
+              <h3>Redes Sociales</h3>
+              <span class="social"><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+              <span class="social"><a href="https://twitter.com/?lang=es"><i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+              <span class="social"><a href="https://www.youtube.com/?hl=es-419&gl=CO"><i class="fa fa-youtube" aria-hidden="true"></i></a></span>
+              <h3>Dirección y Teléfono</h3>
+              <p>Dirección: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>Teléfono: 55555</p>
+            </div>
+            <!-- <div class="half">
+              <div id="google_canvas">
+
+              </div>
+            </div> -->
+          </div>
+        </section>
+        <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&sensor=true"></script> -->
+        <!-- <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBYtXliOMpEnYRJRJ8QIDUo5HKdRla2ucc'></script> -->
+        <!-- <script type="text/javascript" src="js/maps.js"></script> -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js">
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.4.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <!-- <script src="js/jquery.flip.min.js"></script> -->
+        <script src="js/jquery.flip.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/jquery.localScroll.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/jquery.scrollorama.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

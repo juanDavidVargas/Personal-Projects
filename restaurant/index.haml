@@ -1,0 +1,139 @@
+
+-gallery_images = ["food-13.jpg", "food-14.jpg", "food-15.jpg", "food-16.jpg", "food-17.jpg"]
+!!!5
+%html
+  %head
+    %meta{charset:"utf-8"}
+    %title Restaurante
+    %meta{name:"description", content:"Come rico y barato en el mejor restaurante de la ciudad,
+                servicio de primera. Los mejores platos de la ciudad"}
+    -# %link{href:"https://fonts.googleapis.com/css?family=Dancing+Script", rel:"stylesheet", type:"text/css"}
+    %link{href:"css/dancing-script.css", rel:"stylesheet", type:"text/css"}
+    %link{rel:"stylesheet", href:"css/normalize.css"}
+    %link{rel:"stylesheet", href:"css/bootstrap.css"}
+    %link{rel:"stylesheet", href:"css/font-awesome.css"}
+    %link{rel:"stylesheet", href:"css/flexboxgrid.css"}
+    %link{rel:"stylesheet", href:"css/style.css"}
+    %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+    %meta{:"data-name" => "image-counter", content:"#{gallery_images.size - 1}"}
+    %script{src:"js/vendor/modernizr-2.8.3.min.js"}
+  %body
+    ="<!--[if lt IE 9]>"
+    %p{class:"browserupgrade"}
+      Estás usando un navegador
+      %strong desactualizado.
+      por favor
+      %a{href:"http://browserhappy.com/"}
+        actualiza tu navegador
+      para un mejor experiencia
+    ="<![endif]-->"
+
+    .video-container
+      %video{autoplay:true, loop:true, width:"1280", height:"720", poster:"images/bbq.jpg"}
+        %source{src:"videos/bbq.mp4", typ:"video/mp4"}
+        %source{src:"videos/bbq.webm", typ:"video/webm"}
+    .row.full-height.middle-xs.center-xs.relative.up#home
+      .col-xs-12
+        .box.white-text
+          %img{src:"images/logo.png", width:200}
+          %h1.dancing-script.title.no-margin Restaurante Hello Food
+          %p#is-open
+            %i.glyphicon.glyphicon-time
+              %span.text Abierto ahora
+      %nav.fixed.top.right.navigation.white-text#navigation
+        -menu= [{title:"Inicio", link:"#home"}, {title:"Menú", link:"#menu"},
+        {title:"Galería", link:"#gallery"}, {title:"Contacto", link:"#contact"}, {title:"Cómo Llegar", link:"#location"}]
+        %ul.list-inline
+          -menu.each do |item|
+            %li
+              %a.menu-link{href:item[:link]}= item[:title]
+      .absolute.black.large-padding.white-text.full-width#description
+        .row.middle-xs.center-xs
+          .col-xs-7.col-sm-6.white-text.medium
+            La mejor atención y comida preparada por los mejores chefs
+          .col-xs#sticky-navigation
+            .box
+              %nav.text-right.navigation#responsive-nav
+                %i.glyphicon.glyphicon-menu-hamburger.white-text.subtitle.glyphicon-remove#menu-opener
+                %ul.list-inline
+                  -menu.each do |item|
+                    %li
+                      %a.menu-link{href:item[:link]}= item[:title]
+    .text-center.relative#menu
+      .absolute.white#menu-title
+        %h2.dancing-script.title Menú
+      -menu_photos = [{name:"Sancocho", image:"food-01", price:"10.00" },
+                      {name:"Tacos", image:"food-02", price:"13.10" },
+                      {name:"Ensalada", image:"food-03", price:"5.00" },
+                      {name:"Tamal", image:"food-04", price:"10.00" },
+                      {name:"Pernil de cerdo", image:"food-05", price:"30.00" },
+                      {name:"Ajiaco", image:"food-06", price:"11.04" },
+                      {name:"Carne de res", image:"food-07", price:"8.50" },
+                      {name:"Hamburguesa", image:"food-08", price:"5.00" },
+                      {name:"Pollo", image:"food-09", price:"40.00" },
+                      {name:"Sandwich", image:"food-10", price:"10.00" },
+                      {name:"Rosquitas", image:"food-11", price:"6.60" },
+                      {name:"Roscas", image:"food-12", price:"13.00" }]
+
+    .row
+      -menu_photos.each do |photo|
+        .col-md-4.col-lg-3.col-sm-6.col-xs-12.food{style:"background-image:url(images/food/#{photo[:image]}.jpg)"}
+          .screen
+            .row.middle-xs.center-xs.full-height
+              .col-xs-12
+                %h3.dancing-script.white-text.subtitle= photo[:name]
+                %p.no-margin.white-text= photo[:price] + "USD"
+
+    #gallery
+      .inner
+        -gallery_images.each do |image|
+          .image{style:"background-image:url(images/food/#{image})"}
+
+    .container
+      .card.white.black-text.text-center.relative
+        %h3.medium.slim
+          En
+          %strong.dancing-script.medium Restaurante Hello food
+          cocinar no es una profesión, no es una técnica, es un
+          %strong.dancing-script.medium arte
+
+        %p.text-justify.top-space
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+          %strong.dancing-script.medium The chef's.
+          .large-padding.medium.black.white-text.text-center También puedes acceder a nuestro sitio sin conexión a internet
+
+    .black.white-text.full-height#contact
+      .row.middle-xs.full-height
+        .col-xs-12
+          .box
+            .text-center.large.white-text.dancing-script.strong#info-contacto Información de contacto
+            .text-center.medium.white-text.detalles-contacto
+              %a{href: "www.facebook.com"}
+                %image.img-contact{src:"images/facebook.png", target:"_blank"}
+              %a{href: "https://twitter.com", target:"_blank"}
+                %image.img-contact{src:"images/Twitter.png"}
+              %a{href:"mailto:alguien@gmail.com", target:"_blank"}
+                %image.img-contact{src:"images/gmail.png"}
+              %a{href:"Whatsapp: 555-00-55-00", target:"_blank"}
+                %img.img-contact{src:"images/movil.png"}
+
+    #location
+      #map
+      #message.black.large-padding.white-text.text-center.medium
+        Mapa restaurante
+        .dancing-script.medium Hello Food
+
+    %script{src:"js/jquery.js"}
+    %script
+      window.jQuery || document.write("<script src='js/vendor/jquery-3.2.0.min.js'><\/script>")
+    %script{src:"https://maps.googleapis.com/maps/api/js?key=AIzaSyBrJtzVeE8IAe03_LdNBVSqYInUBtSR-mQ"}
+    %script{src:"dist/app.js"}
+    -# %script{src:"js/maps.js"}
+    -# %script{src:"js/form_object.js"}
+    -# %script{src:"js/main.js"}
+    -# %script{src:"js/steps.js"}

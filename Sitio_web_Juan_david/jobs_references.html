@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web que almacena la hoja de vida de Juan David">
+    <meta name="keywords" content="hoja de vida, Juan, David, hoja, vida">
+    <meta name="Author" content="Juan David Vargas Penagos">
+    <title>Referencias Laborales | Juan David</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/font.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/dataTables.min.js"></script>
+    <script src="js/i18n/es.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/dataTables.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" id="logo">
+        <h1>Juan David</h1>
+        <h2>Análisis y desarrollo de sistemas de información</h2>
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Acerca</a></li>
+          <li><a href="contact.html" >Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="wrapper-contact">
+      <section id="primary-study">
+        <h3>Referencias Laborales</h3>
+        <hr>
+        <span><a href="index.html" class="btn btn-info">Volver al Inicio</a></span>
+        <p>
+          <table class="table table-hover table-responsive" id="jobs_references">
+            <thead>
+              <tr>
+                <th>Nombres</th>
+                <th>Empresa</th>
+                <th>Ciudad/País</th>
+                <th>Cargo</th>
+                <th>Teléfono</th>
+                <th>Celular</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Alejandro Celis</td>
+                <td>LatinCheckout S.A.S</td>
+                <td>Medellín, Antioquia, Colombia</td>
+                <td>Director de tecnología</td>
+                <td>352-77-68</td>
+                <td>321-760-39-10</td>
+                <td><a href="mailto:celis@estuyo.com" target="_blank">Celis@estuyo.com</a></td>
+              </tr>
+              <tr>
+                <td>Carlos Mario Garzón</td>
+                <td>Compañia de empaques S.A</td>
+                <td>Medellín, Antioquia, Colombia</td>
+                <td>Supervisor</td>
+                <td>N/A</td>
+                <td>301-588-59-50</td>
+                <td>N/A</td>
+              </tr>
+            </tbody>
+          </table>
+        </p>
+      </section>
+    </div>
+    <footer>
+      <p>
+        <a href="https://twitter.com/@juandav96763978" target="_blank"><img src="img/twitter.png" alt="Twitter Logo" width="50" height="50" class="social-icons"></a>
+        <a href="https://www.facebook.com/juandavid.vargas.752" target="_blank"><img src="img/facebook.png" alt="Facebook Logo" width="50" height="50" class="social-icons"></a>
+        <a href="mailto:davidvargas.jdvp@gmail.com" target="_blank"><img src="img/mail.jpg" alt="Mail Logo" width="50" height="50" class="social-icons"></a>
+      </p>
+      <p>&copy; 2017 Juan David Vargas</p>
+    </footer>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#jobs_references').DataTable();
+    });
+    </script>
+  </body>
+</html>

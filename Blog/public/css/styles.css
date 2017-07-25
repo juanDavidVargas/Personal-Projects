@@ -1,0 +1,168 @@
+/*Fonts*/
+@import url("http://fonts.googleapis.com/css?family=Croissant+One");
+
+.croissant{
+  font-family: 'Croissant One', cursive;
+}
+/*styles website*/
+header{
+  background-image: url('https://static.pexels.com/photos/6319/smartphone-vintage-technology-music.jpg');
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.blur{
+  min-height: inherit;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+section{
+  height: auto;
+  padding-top: 65px;
+}
+
+footer{
+  background-color: #36383d;
+  border-top: 1px solid #000;
+  min-height: 350px;
+  padding-top: 5%;
+}
+
+.white{
+  color: #fff;
+}
+
+.blue{
+  color: #15ACD1;
+}
+
+/*Navbars*/
+.hide{
+  display: none;
+}
+
+#title{
+  font-size: 5em;
+  color: #fff;
+  text-align: center;
+  padding-top: 15%;
+}
+
+#subtitle{
+  font-size: 2.5em;
+  color: #fff;
+  text-align: center;
+}
+
+.btn{
+  border-radius: 0px;
+}
+
+.btn-web{
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  margin-top: 1%;
+  -webkit-transition: background-color .5s, border .5s;
+  -moz-transition: background-color .5s, border .5s;
+  -o-transition: background-color .5s, border .5s;
+}
+
+.btn-web:hover{
+  background-color: #fff;
+  border: 5px solid #fff;
+  color: tomato;
+  -webkit-transition: background-color .5s, border .5s;
+  -moz-transition: background-color .5s, border .5s;
+  -o-transition: background-color .5s, border .5s;
+  cursor: pointer;
+}
+
+.img-article{
+  margin-top: 10px;
+}
+
+#artitle{
+  padding: 130px;
+  text-align: center;
+  font-size: 3em;
+}
+
+.lb{
+  border-radius: 0px;
+  font-size: 12px;
+}
+
+#tag{
+  background-image: url('https://static.pexels.com/photos/6319/smartphone-vintage-technology-music.jpg');
+  min-height: 35vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-bottom: 3px solid blue;
+}
+
+#tagged{
+  color: #fff;
+  font-size: 3em;
+  padding-top: 12vh;
+  text-align: center;
+}
+
+.tgs{
+  padding: 0px;
+}
+
+#taggex{
+  color: #fff;
+  font-size: 2.5em;
+}
+
+.bold{
+   font-weight: bolder;
+}
+
+.menu-item:hover{
+  font-weight: bold;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+/*Media querys*/
+@media screen and (max-width: 500px){
+  #title{
+    font-size: 3em;
+    color: #fff;
+    text-align: center;
+    padding-top: 15%;
+  }
+
+  #subtitle{
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+  }
+
+  header{
+    background-image: url('https://static.pexels.com/photos/6319/smartphone-vintage-technology-music.jpg');
+    min-height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  footer{
+    background-color: #333;
+    min-height: 150px;
+  }
+
+  #artitle{
+    padding: 130px;
+    text-align: center;
+    font-size: 1.5em;
+  }
+}
